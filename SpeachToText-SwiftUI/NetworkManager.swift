@@ -9,18 +9,25 @@
 import Foundation
 
 class NetworkManager{
-    let 
-}
-
-enum EndPoints{
-    case SpeachToText
-    
-   private func getUrlString() -> String{
-        switch self {
-        case .SpeachToText:
-            return ""
-        default:
-            <#code#>
+   
+    enum EndPoints{
+        
+       static let base = "http.xsxsxsxs.com/3"
+        
+        case SpeachToText(String)
+        
+        //computed property -they dont store values .. but return when we ask by preparing from another values
+        var stringValue: String {
+            switch self {
+            case .SpeachToText(let text):
+                return EndPoints.base + "/sdsd/wwdw&query=\(text)"
+            }
+        }
+        
+        var url: URL{
+            return URL(string: self.stringValue)!
         }
     }
 }
+
+
