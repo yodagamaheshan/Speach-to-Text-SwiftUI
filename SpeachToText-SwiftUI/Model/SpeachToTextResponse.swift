@@ -9,7 +9,7 @@
 import Foundation
 
 //struct - usually used when we need immutable object
-//Codable - its a protocol which helps to map JOSON to swift object
+//Codable - its a protocol which helps to map JOSON to swift object and vise versa
 struct SpeachToTextResponse: Codable {
     let message: String
 }
