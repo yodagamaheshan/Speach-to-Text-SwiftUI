@@ -106,7 +106,6 @@
 				56F506812428C2EB0046B8B7 /* AppDelegate.swift */,
 				56F506832428C2EB0046B8B7 /* SceneDelegate.swift */,
 				56F506852428C2EB0046B8B7 /* ContentView.swift */,
-				56F506B12428C55D0046B8B7 /* NetworkManager.swift */,
 				56F506B32428C7590046B8B7 /* Model */,
 				56F506872428C2EC0046B8B7 /* Assets.xcassets */,
 				56F5068C2428C2EC0046B8B7 /* LaunchScreen.storyboard */,
@@ -145,6 +144,7 @@
 		56F506B32428C7590046B8B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				56F506B12428C55D0046B8B7 /* NetworkManager.swift */,
 				56F506B42428C7730046B8B7 /* SpeachToTextResponse.swift */,
 			);
 			path = Model;
