@@ -28,6 +28,26 @@ class NetworkManager{
             return URL(string: self.stringValue)!
         }
     }
+    
+    func fetchData(text: String){
+        let task = URLSession.shared.dataTask(with: EndPoints.SpeachToText("Spech text").url) { (data, response, error) in
+            if error == nil{
+                let decorder = JSONDecoder()
+                //to check wether the data is available ( normally error is nill , then there should be data)
+                if let safeData = data{
+                    do{
+                    let resualt = try decorder.decode(SpeachToTextResponse.self, from: safeData)
+                        DispatchQueue.main.async {
+                            // assign to Published var
+                        }
+                    }catch{
+                        print(error)
+                    }
+                }
+            }
+        }
+        task.resume()
+    }
 }
 
 
