@@ -9,16 +9,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isRecording: Bool = false
+    
     var body: some View {
         VStack {
             Text("Hello, World!")
             Button(action: {
                 //recording start
+                self.isRecording.toggle()
             }) {
-                HStack {
-                    Image(systemName: "mic.fill")
-                    Text("Record")
+                VStack {
+                    Image(systemName: isRecording ? "mic.circle.fill" : "mic.circle" )
+                        .resizable()
+                        .frame(width: 100, height: 100, alignment: .center)
+                    Text(isRecording ? "Stop" : "Record")
                 }
+                .foregroundColor(isRecording ? Color.red : Color.blue)
+                .animation(.default)
             }
         }
     }
