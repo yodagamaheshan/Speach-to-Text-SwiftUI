@@ -13,7 +13,10 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Hello, World!")
+            ScrollView {
+                Text("Hello, World!asxasxasxasxasxasxasxxaxasxaxsasasasasasasasasasaxsasxasaxasxasxasasaxasxaxaxaxasxasxasxasxaxsaxa Hello, World!asxasxasxasxasxasxasxxaxasxaxsasasasasasasasasasaxsasxasaxasxasxasasaxasxaxaxaxasxasxasxasxaxsaxa")
+            }.frame(height: 300, alignment: .center)
+            
             Button(action: {
                 //recording start
                 self.isRecording.toggle()
