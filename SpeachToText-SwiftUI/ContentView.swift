@@ -10,7 +10,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text("Hello, World!")
+            Button(action: {
+                //recording start
+            }) {
+                HStack {
+                    Image(systemName: "mic.fill")
+                    Text("Record")
+                }
+            }
+        }
     }
 }
 
